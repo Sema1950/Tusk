@@ -1,318 +1,181 @@
-Tusk — Backlog
+# Tusk — Backlog
 
-Last updated: 2026-06-22
-Current project stage: Discovery and definition
+**Last updated:** 2026-06-22
+**Project stage:** Concept definition
+**Current priority:** Define the conceptual architecture of Tusk.
 
-Current priority
+## Completed foundation
 
-Prepare the minimum project foundation required to begin structured discovery and representative-file analysis.
+* Repository structure created.
+* `instructions.md` created.
+* `docs/project_overview.md` created.
+* `docs/current_state.md` created.
+* Initial project concept documented.
 
-Priority 1 — Complete essential project documentation
-1. Create docs/current_state.md
+## Priority 1 — Conceptual architecture
 
-Status: Completed locally, not yet pushed.
+### 1. Define the major parts of Tusk
 
-Purpose:
+**Status:** Next
 
-record the current project stage;
-summarize completed work;
-identify blockers and open questions;
-define the next recommended step.
-2. Create docs/backlog.md
+Define, at a conceptual level:
 
-Status: In progress.
+* the deterministic processing core;
+* the human-review capability;
+* project data and history storage;
+* audit and traceability capability;
+* integrations with external systems;
+* controlled AI assistance;
+* the separate history and audit assistant.
 
-Purpose:
+Do not select technologies or define detailed implementation.
 
-define the ordered project work;
-make priorities and dependencies visible;
-separate immediate work from later work.
-3. Create docs/workflow_map.md
+### 2. Define responsibility boundaries
 
-Status: Not started.
+**Status:** Not started
 
-Purpose:
+Clarify:
 
-define the initial high-level policy bordereau workflow;
-define the initial high-level claims bordereau workflow;
-show shared context and independent processing;
-identify actors, states, reviews, exceptions, and outputs;
-clearly mark unknown steps as provisional or to be defined.
-4. Create docs/decisions.md
+* what belongs to deterministic processing;
+* what requires human judgment;
+* what AI may assist with;
+* what AI must never approve or control;
+* how the two file-processing streams remain independent;
+* how shared broker and reporting-period context is represented conceptually.
 
-Status: Not started.
+### 3. Approve the conceptual architecture
 
-Purpose:
+**Status:** Not started
 
-Record the project decisions already confirmed, including:
+Review the architecture for:
 
-policy and claims files are separate processing streams;
-no cross-file reconciliation is currently required;
-deterministic processing is the core;
-AI output is advisory unless explicitly approved;
-humans retain responsibility for material decisions;
-versioning, lineage, and audit history are required;
-a separate AI history and audit capability is part of the project concept.
-5. Create docs/session_handoff.md
+* consistency with the project overview;
+* separation of deterministic logic, AI, and human responsibility;
+* traceability and versioning;
+* modularity;
+* security and privacy considerations;
+* ability to evolve as requirements become clearer.
 
-Status: Not started.
+Record approved architectural decisions in `docs/decisions.md`.
 
-Purpose:
+## Priority 2 — Capabilities and scope boundaries
 
-summarize the current project position;
-identify completed files;
-identify the active priority;
-allow a future session to continue without relying on chat history.
-Priority 2 — Prepare representative-data discovery
-6. Select the first representative broker
+### 4. Define major system capabilities
 
-Status: Not started.
+**Status:** Not started
 
-Required outcome:
+Identify the capabilities Tusk must eventually provide without defining detailed workflows or technology.
 
-identify which broker will be used for initial analysis;
-confirm that representative policy and claims files are available;
-confirm whether the files may be used for development and testing.
+### 5. Define scope boundaries
 
-Dependency: Essential documentation should be prepared first.
+**Status:** Not started
 
-7. Collect representative source files
+Clarify:
 
-Status: Not started.
+* what is in scope;
+* what is out of scope;
+* what remains provisional;
+* what is deliberately deferred.
 
-Required files should include, where available:
+## Priority 3 — High-level workflows
 
-one or more policy bordereau versions;
-one or more claims bordereau versions;
-examples containing known errors or exceptions;
-any available expected outputs;
-relevant mapping sheets or processing instructions.
+### 6. Define the policy bordereau workflow
 
-Use sanitized, anonymized, synthetic, or formally approved data.
+**Status:** Not started
 
-8. Document the current manual process
+Create a high-level business workflow only after the conceptual architecture and capability boundaries are approved.
 
-Status: Not started.
+### 7. Define the claims bordereau workflow
 
-For each file stream, determine:
+**Status:** Not started
 
-who receives the file;
-how it is identified and registered;
-how worksheets and columns are reviewed;
-how fields are mapped;
-how data is cleaned and transformed;
-which validations are performed;
-how exceptions are handled;
-when the broker is contacted;
-who approves the result;
-what final output is produced;
-where the final output is sent or loaded;
-which records are retained.
-9. Identify the first proof-of-concept boundary
-
-Status: Not started.
-
-The proof of concept should be narrow, deterministic, and testable.
-
-The scope must be selected only after representative files and the current process have been reviewed.
-
-Priority 3 — Define the first processing workflow
-10. Define policy bordereau workflow requirements
-
-Status: Not started.
-
-Define:
-
-trigger;
-actors;
-input conditions;
-workflow states;
-extraction steps;
-mappings;
-transformations;
-validations;
-exceptions;
-human approvals;
-outputs;
-audit events;
-correction and reprocessing paths.
-11. Define claims bordereau workflow requirements
-
-Status: Not started.
-
-Define the same workflow elements independently for the claims stream.
+Create this as an independent workflow.
 
 Do not introduce cross-file reconciliation unless a later approved requirement changes the current decision.
 
-12. Define shared broker and reporting-period context
+## Priority 4 — Main data concepts
 
-Status: Not started.
+### 8. Define the conceptual data model
 
-Determine how both independent file streams reference:
+**Status:** Not started
 
-broker;
-reporting period;
-file type;
-submission;
-file version;
-processing run.
-Priority 4 — Define data and rules
-13. Create the conceptual data model
+Identify the main business concepts and relationships.
 
-Status: Not started.
+Do not create a physical database schema at this stage.
 
-Define business concepts and relationships before selecting a physical database schema.
+### 9. Define traceability and versioning concepts
 
-Likely concepts to investigate include:
+**Status:** Not started
 
-broker;
-reporting period;
-submission;
-source file;
-file version;
-worksheet;
-source row;
-processing run;
-mapping;
-rule version;
-validation result;
-exception;
-approval;
-output;
-audit event.
+Clarify conceptually how Tusk should connect:
 
-This list is provisional and must be validated against representative data and workflows.
+* source information;
+* processing history;
+* rules and mappings;
+* human decisions;
+* approvals;
+* outputs;
+* historical explanations.
 
-14. Define mappings and transformation governance
+## Priority 5 — Discovery and representative data
 
-Status: Not started.
+### 10. Review the current business process
 
-Determine:
+**Status:** Not started
 
-how approved mappings are stored;
-how new mappings are proposed;
-who approves them;
-how mapping versions are tracked;
-how historical runs retain the mapping version used.
-15. Define validations and exception categories
+Document how the work is currently performed.
 
-Status: Not started.
+### 11. Review representative files
 
-Determine:
+**Status:** Not started
 
-structural validations;
-required-field validations;
-format validations;
-duplicate checks;
-business-rule validations;
-warning versus error behaviour;
-which exceptions require human review;
-how corrected files are reprocessed.
+Analyze approved representative policy and claims files after the conceptual foundation is established.
 
-Do not invent business validations before source evidence and process owners confirm them.
+### 12. Validate architecture and workflows
 
-Priority 5 — Design and build the first proof of concept
-16. Define proof-of-concept acceptance criteria
+**Status:** Not started
 
-Status: Not started.
+Use evidence from the current process and representative files to confirm, change, or reject provisional concepts.
 
-Acceptance criteria should be based on the selected representative files and approved workflow.
+## Priority 6 — First proof of concept
 
-17. Select implementation technologies
+### 13. Define the proof-of-concept scope
 
-Status: Not started.
+**Status:** Not started
 
-Technology selection must follow requirements, representative-data analysis, and proof-of-concept scope.
+Select one narrow, deterministic, testable capability.
 
-Do not select hosting, databases, frameworks, or AI providers prematurely.
+### 14. Define acceptance criteria
 
-18. Build deterministic file inspection
+**Status:** Not started
 
-Status: Not started.
+Base acceptance criteria on confirmed requirements and representative data.
 
-Potential capability:
+### 15. Select implementation technologies
 
-read workbook metadata;
-identify worksheets;
-inspect headers;
-preserve source references;
-produce a repeatable structural profile.
-19. Build deterministic transformation and validation
+**Status:** Not started
 
-Status: Not started.
+Choose technologies only after the proof-of-concept requirements are sufficiently understood.
 
-Implement only approved mappings, rules, and validations within the selected proof-of-concept scope.
+### 16. Build and test the proof of concept
 
-20. Add controlled human review
+**Status:** Not started
 
-Status: Not started.
+Implementation details will be defined later.
 
-Support review and approval of:
+## Deferred
 
-unfamiliar structures;
-proposed mappings;
-material exceptions;
-corrections affecting final output.
-21. Generate controlled output
+The following items are intentionally deferred:
 
-Status: Not started.
+* detailed workflow states;
+* detailed validation rules;
+* detailed exception categories;
+* user-role and permission model;
+* physical database schema;
+* hosting and deployment architecture;
+* production integrations;
+* final security and retention policies;
+* detailed AI prompts and evaluations;
+* production scaling and support model.
 
-The output format and destination remain to be defined.
 
-22. Preserve lineage and audit evidence
-
-Status: Not started.
-
-The proof of concept should retain sufficient evidence to reconstruct how each output was produced.
-
-Priority 6 — Add selected AI capabilities
-23. Define the first approved AI-assisted use case
-
-Status: Not started.
-
-Possible use cases include:
-
-unfamiliar-field mapping suggestions;
-file-version comparison;
-exception summaries;
-evidence-grounded processing explanations.
-
-AI should not be added until the deterministic workflow and human approval boundaries are clear.
-
-24. Define AI evaluation criteria
-
-Status: Not started.
-
-Evaluate AI separately from deterministic processing for:
-
-evidence grounding;
-unsupported claims;
-uncertainty handling;
-consistency;
-human-review requirements;
-prompt and model version effects.
-25. Design the history and audit assistant
-
-Status: Not started.
-
-The assistant should explain existing historical evidence and must not alter records or invent missing facts.
-
-Deferred until requirements are confirmed
-
-The following items are deliberately deferred:
-
-production architecture;
-physical database schema;
-cloud or hosting provider;
-production integrations;
-final security and retention policy;
-performance targets;
-operational support model;
-full user-role model;
-advanced AI capabilities;
-scaling strategy.
-Completed foundation
-Repository structure created.
-instructions.md created.
-docs/project_overview.md created.
-docs/current_state.md prepared locally.
