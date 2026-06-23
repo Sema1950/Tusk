@@ -170,6 +170,31 @@ Do not claim that a file was reviewed when it was not available.
 
 ---
 
+## Start command
+
+When the user writes `start`, begin a Tusk working session.
+
+Read:
+
+* `instructions.md`
+* `docs/current_state.md`
+* `docs/backlog.md`
+* `docs/session_handoff.md`, if it exists
+
+Then:
+
+1. identify the current project stage;
+2. identify the active or next task;
+3. identify blockers, unresolved decisions, and relevant approved information;
+4. identify which files are relevant;
+5. provide a brief session-start summary.
+
+Do not modify files or begin substantial work until the user confirms the proposed task.
+
+When the user writes `start: <task>`, load the same project context and then begin the specified task, unless required information is missing or the task conflicts with approved project information.
+
+---
+
 ## 5. Project-file responsibilities
 
 Each project file must have one clear purpose.
