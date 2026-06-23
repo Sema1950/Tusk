@@ -133,7 +133,11 @@ When a conflict is found:
 
 ## 4. Start-of-task review
 
-At the start of every new chat or substantial task, read:
+This rule applies to project-reasoning and project-management work, including concept, scope, decisions, architecture, workflows, and documentation.
+
+For routine coding inside an already-approved task, coding agents such as Codex and Cursor should enter through `AGENTS.md`. Consult this file only when the task involves project concepts, decisions, scope, documentation, architecture, workflows, data meaning, approvals, or unresolved requirements.
+
+At the start of every new chat or substantial project-reasoning or project-management task, read:
 
 * `instructions.md`
 * `docs/current_state.md`
@@ -172,7 +176,7 @@ Do not claim that a file was reviewed when it was not available.
 
 ## Start command
 
-When the user writes `start`, begin a Tusk working session.
+When the user writes `start`, begin a Tusk project-reasoning or project-management session.
 
 Read:
 
@@ -191,7 +195,7 @@ Then:
 
 Do not modify files or begin substantial work until the user confirms the proposed task.
 
-When the user writes `start: <task>`, load the same project context and then begin the specified task, unless required information is missing or the task conflicts with approved project information.
+When the user writes `start: <task>`, load the same project context and then begin the specified project-reasoning or project-management task, unless required information is missing or the task conflicts with approved project information.
 
 ##### When the user writes end:
 
