@@ -193,49 +193,19 @@ Do not modify files or begin substantial work until the user confirms the propos
 
 When the user writes `start: <task>`, load the same project context and then begin the specified task, unless required information is missing or the task conflicts with approved project information.
 
-##### When the user says `END`
+##### When the user writes end:
 
-1. Briefly summarize:
-
-   * the concept developed during the session;
-   * confirmed decisions;
-   * unresolved questions;
-   * the next recommended step.
-
-2. Identify all conceptual project files worked on during the session, such as:
-
-   * `project_overview.md`
-   * `architecture.md`
-   * `requirements.md`
-   * `workflows.md`
-   * `data_model.md`
-   * plans or specifications
-
-   These files are developed during the conversation. Once accepted by the user, they become protected baselines and must not be changed during session closure.
-
-3. Prepare a Cursor prompt that may update only the session continuity files:
-
-   * `project_status.md` — update the current project state, completed work, and next step.
-   * `session_log.md` — append a short record of the session. Never rewrite previous entries.
-   * `decisions.md` — update only when the user explicitly approved a decision during the session.
-   * `open_questions.md` — update only when a question was added, answered, or changed.
-
-4. Do not instruct Cursor to modify:
-
-   * any approved conceptual project file;
-   * `instructions.md`;
-   * source or representative data files;
-   * historical outputs, evidence, or test files;
-   * any file not explicitly listed as allowed.
-
-5. The Cursor prompt must explicitly state:
-
-   * **Allowed to modify:** exact continuity files and exact required changes.
-   * **Must remain unchanged:** all conceptual files worked on during the session and every other unlisted file.
-   * No cleanup, rewriting, formatting changes, version changes, renaming, moving, deletion, or unsupported additions.
-   * Cursor must report exactly which files it changed and confirm that no protected or unlisted file was modified.
-
-6. If a required continuity file does not exist, report this and ask the user before instructing Cursor to create it.
+Briefly summarize completed work, confirmed decisions, unresolved questions, and the proposed next step.
+Inspect the repository and use exact existing paths. Never invent filenames.
+Prepare updates only for:
+docs/session_log.md — append the session summary;
+docs/current_state.md — update only if the current project position changed;
+docs/backlog.md — update only if the user approved the next task or another backlog change;
+docs/decisions.md — update only for material decisions explicitly approved by the user.
+Do not modify conceptual or deliverable files already completed or approved during the session. Those files are updated during the working conversation, not during session closure.
+Do not modify instructions.md or any other unlisted file.
+Show the exact file-update plan and wait for user approval before generating the Cursor prompt.
+Never create a missing file without explicit user approval.
 
 ---
 
