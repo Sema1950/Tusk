@@ -12,7 +12,7 @@ Approved decisions must remain visible. If a decision changes, mark the earlier 
 
 ## DEC-001 — Separate processing streams
 
-**Status:** Confirmed
+**Status:** Provisional
 **Date:** 2026-06-22
 
 ### Decision
@@ -29,7 +29,7 @@ The two streams may share common components, but their processing runs, validati
 
 ## DEC-002 — No cross-file reconciliation
 
-**Status:** Confirmed
+**Status:** Provisional
 **Date:** 2026-06-22
 
 ### Decision

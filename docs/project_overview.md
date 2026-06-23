@@ -34,9 +34,9 @@ Tusk is intended to make this process more controlled, transparent, repeatable, 
 
 ---
 
-## 3. Confirmed input streams
+## 3. Provisional input streams
 
-Tusk must support two recurring broker-provided Excel-file streams:
+The current direction is for Tusk to support two recurring broker-provided Excel-file streams, subject to change as discovery continues:
 
 1. **Policy bordereau**
 
@@ -51,11 +51,11 @@ Tusk must support two recurring broker-provided Excel-file streams:
    * claim status and values;
    * related loss data.
 
-These files may relate to the same broker and reporting period, but they must be processed as separate workflows.
+These files may relate to the same broker and reporting period. The current provisional direction is that they should be processed as separate workflows.
 
-No cross-file reconciliation between the policy bordereau and claims bordereau is currently required.
+No cross-file reconciliation between the policy bordereau and claims bordereau is currently planned, but this remains open to change if later discovery identifies a requirement.
 
-The two streams share only the common business context of broker and reporting period.
+The current provisional view is that the two streams share only the common business context of broker and reporting period.
 
 ---
 
@@ -271,9 +271,6 @@ Final security, privacy, and retention policies are still to be defined.
 ### Confirmed
 
 * internal insurance data-processing system;
-* recurring policy bordereau processing;
-* recurring claims bordereau processing;
-* independent processing of the two streams;
 * deterministic processing core;
 * human approval for judgment-based decisions;
 * versioning and traceability;
@@ -282,6 +279,9 @@ Final security, privacy, and retention policies are still to be defined.
 
 ### Provisional
 
+* recurring policy bordereau processing;
+* recurring claims bordereau processing;
+* independent processing of the two streams;
 * exact workflow stages;
 * exact review and approval roles;
 * exact exception categories;
