@@ -60,7 +60,7 @@ When a conflict is found:
 
 At the start of every new chat or substantial task, read:
 
-* `docs/instructions.md`
+* `instructions.md`
 * `docs/current_state.md`
 * `docs/backlog.md`
 * `docs/project_overview.md`
