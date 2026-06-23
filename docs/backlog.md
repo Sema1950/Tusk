@@ -1,6 +1,6 @@
 # Tusk — Backlog
 
-**Last updated:** 2026-06-22
+**Last updated:** 2026-06-23
 
 ## Purpose
 
@@ -21,11 +21,19 @@ Do not add speculative future work merely to outline the entire project.
 
 ## Current priority
 
-**To be defined after the next step is agreed.**
+Obtain one real, representative broker file for a single stream, policy bordereau, from one broker, and perform a first structural review of it.
+
+Rationale: the conceptual architecture baseline is complete, and per `docs/architecture.md` and `docs/decisions.md` DEC-007, the data model, validations, proof of concept, and technology choices cannot be defined honestly without representative data. This file is the gate for all subsequent work.
 
 ## Next tasks
 
-No additional tasks have been approved.
+1. Obtain one representative policy bordereau file and record a first structural review.
+
+Acceptance conditions:
+
+* One representative policy bordereau file is obtained.
+* The file is sanitized / anonymized or a formally approved sample, with no production secrets and no confidential customer data, consistent with the repository's data-handling rules.
+* A short structural review is recorded: worksheet names, header row location, column names, data formats, and any obvious irregularities.
 
 ## Blocked
 
