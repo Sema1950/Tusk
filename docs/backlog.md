@@ -21,23 +21,41 @@ Do not add speculative future work merely to outline the entire project.
 
 ## Current priority
 
-Obtain one real, representative broker file for a single stream, policy bordereau, from one broker, and perform a first structural review of it.
-
-Rationale: the conceptual architecture baseline is complete, and per `docs/architecture.md` and `docs/decisions.md` DEC-007, the data model, validations, proof of concept, and technology choices cannot be defined honestly without representative data. This file is the gate for all subsequent work.
+Obtain the remaining reference artefacts and prepare the Stage 1 thin slice for one policy-bordereau broker using the universal-engine and mapping-as-data approach defined in `docs/mapping_concept.md`, DEC-008, and DEC-009.
 
 ## Next tasks
 
-1. Obtain one representative policy bordereau file and record a first structural review.
+1. Obtain and review the remaining Stage 1 artefacts for the same broker:
+
+   * standard insurance-company template;
+   * existing Excel script for that broker format;
+   * output produced by that script from the same representative source file.
+
+Precondition:
+
+* Stage 1 requires four artefacts in total: the source bordereau, standard template, existing Excel script, and script output.
+* A representative anonymized source bordereau with authentic broker column names has already been provided and structurally reviewed.
+* The source bordereau must be available in the Stage 1 implementation environment.
+* Availability of the remaining three artefacts has not yet been confirmed.
+* If a required artefact cannot be obtained, the Stage 1 plan must be reviewed and adjusted rather than silently assuming an equivalent substitute.
 
 Acceptance conditions:
 
-* One representative policy bordereau file is obtained.
-* The file is sanitized / anonymized or a formally approved sample, with no production secrets and no confidential customer data, consistent with the repository's data-handling rules.
-* A short structural review is recorded: worksheet names, header row location, column names, data formats, and any obvious irregularities.
+* The output file follows the required standard-template structure.
+* Mapping is stored separately from engine code.
+* The reusable engine contains no hidden broker-specific logic.
+* The same source file, mapping version, engine version, configuration, and confirmed rules produce the same result.
+* Every material discrepancy with the existing script output is explained and classified.
+* Correctness is not based solely on matching the existing script.
+* No transformation or validation is invented without evidence from the source file, template, existing process, or confirmed business clarification.
 
 ## Blocked
 
-No tasks are currently recorded as blocked.
+Stage 1 implementation is blocked until the remaining required artefacts are available:
+
+* standard insurance-company template;
+* existing Excel script;
+* script output for the same representative source file.
 
 ## Deferred
 

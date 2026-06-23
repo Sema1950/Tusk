@@ -1,6 +1,6 @@
 # Tusk — Decisions
 
-**Last updated:** 2026-06-22
+**Last updated:** 2026-06-23
 
 ## Purpose
 
@@ -116,3 +116,63 @@ Once the immediate concept is clear enough to act on, the project should prefer 
 ### Consequence
 
 Working software is a primary discovery method. Documentation should support implementation and preserve what is learned, not delay building unless a genuine blocking unknown exists.
+
+---
+
+## DEC-008 — Universal mapping engine with mapping-as-data
+
+**Status:** Provisional
+**Date:** 2026-06-23
+
+### Decision
+
+Broker bordereau files will be converted to the standard template by one reusable deterministic processing engine plus a separate mapping description for each broker format.
+
+Mapping will be stored as versioned data, provisionally in JSON, and may reference only pre-implemented and tested transformation operations.
+
+The engine must not execute arbitrary code from a mapping.
+
+AI may propose mappings for new or changed formats but must not approve or apply them.
+
+See `docs/mapping_concept.md`.
+
+### Consequence
+
+Broker-specific mappings and configuration belong outside the reusable engine rather than in separate complete processing scripts.
+
+The deterministic engine must operate independently of AI.
+
+A new engine operation may be introduced only when representative data demonstrates the need. It should be implemented as a reusable controlled operation rather than hidden broker-specific logic.
+
+Exact implementation technologies remain provisional.
+
+---
+
+## DEC-009 — Source of truth for Stage 1
+
+**Status:** Provisional
+**Date:** 2026-06-23
+
+### Decision
+
+For the first thin slice, the standard insurance-company template is the reference for the required target structure.
+
+Correctness of mappings and transformations must also be supported by confirmed business meaning or business clarification where the template alone does not establish the correct rule.
+
+The existing Excel script and its output are evidence of the current process and a comparison baseline. They are not automatic truth because they may contain outdated rules or errors.
+
+Material discrepancies must be investigated and classified as one of the following:
+
+* new-engine error;
+* old-script error;
+* formatting-only difference;
+* unconfirmed business rule;
+* open question.
+
+### Consequence
+
+Matching the existing Excel script alone is insufficient for Stage 1 success.
+
+The new result must conform to the required template structure and use mappings and transformations supported by confirmed meaning or clarification.
+
+Unexplained discrepancies must not be silently accepted.
