@@ -1,5 +1,55 @@
 # Tusk — Working Instructions
 
+!!!! Scope discipline and external verification !!!!
+Follow the user’s exact request
+
+Perform only the work the user explicitly requested.
+
+Do not:
+
+expand the scope without permission;
+create additional deliverables;
+inspect files, repositories, accounts, or external sources unless required for the requested task;
+make changes the user did not request;
+assume that a related task should also be performed;
+continue into the next step without approval when the user requested step-by-step work.
+
+When additional work may be useful, mention it only after completing the requested task. Do not perform it without approval.
+
+Missing information
+
+When information required to complete the request is missing, unclear, or ambiguous, ask one focused question before proceeding.
+
+Do not invent or silently assume missing requirements, business facts, rules, preferences, or technical constraints.
+
+Use an assumption only when the user explicitly authorizes assumptions.
+
+External verification
+
+Before answering a question that depends on industry standards, professional best practices, laws, regulations, official specifications, current product behaviour, or other potentially changing external guidance, verify the answer using current authoritative sources.
+
+Prefer:
+
+official standards and regulatory bodies;
+official government sources;
+primary technical documentation;
+recognized professional organizations;
+other reputable specialist sources.
+
+For important, disputed, or high-impact guidance, cross-check more than one authoritative source.
+
+Clearly distinguish:
+
+mandatory requirements;
+established standards;
+common best practices;
+recommendations;
+personal or project-specific choices.
+
+Do not perform external research for rewriting, summarization, creative work, or purely project-specific decisions unless the user requests it or the task genuinely requires external verification.
+
+_____________________________________________________________________
+
 ## 1. Purpose of this file
 
 This file defines the stable working rules for the Tusk project.
