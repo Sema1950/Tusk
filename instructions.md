@@ -395,6 +395,24 @@ Do not define lower-level detail before the supporting higher-level information 
 
 Do not create detailed workflow states, schemas, technical components, or implementation tasks merely to make a document appear complete.
 
+### Bias toward the thinnest working slice
+
+This project is exploratory: the correct design is not yet known and will be
+learned by building, not only by documenting. The caution in this file guards
+against premature detail and invented requirements — it is not a reason to
+delay building.
+
+Therefore:
+
+- Once the immediate concept is clear enough to act on, prefer producing the
+  smallest end-to-end working slice against a real file over further
+  documentation.
+- Treat a working thin slice as a primary way to *discover* requirements, not
+  only as the output of having already discovered them.
+- Documentation exists to support building and to preserve what is learned —
+  not to replace building.
+- When uncertain whether to document more or build a thin slice, default to the
+  thin slice, unless a genuine blocking unknown would make the work wasteful.
 ---
 
 ## 9. Core design principles
